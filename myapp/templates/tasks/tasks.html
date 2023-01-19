@@ -1,0 +1,14 @@
+{% extends 'layouts/base.html' %}
+{% block content %}
+<h1>Tasks</h1>
+{% for task in tasks %}
+{# comentario en jinja #}
+    <h1>{% if task.done == 1 %} ✅ {% else %} ⏱ {% endif %} {{task.title}}</h1>
+
+    {% if task.description == '' %}
+        <h3>Sin descripcion</h3>
+    {% else %}    
+        <h3>{{task.description}}</h3>
+    {% endif %}    
+{% endfor %}
+{% endblock %}
