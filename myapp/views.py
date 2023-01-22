@@ -4,22 +4,11 @@ from django.shortcuts import get_object_or_404, render, redirect
 from .forms import CreateNewTask, CreateNewProject
 
 # Create your views here.
-def hello(request,user):
-    print(type(user))
-    return HttpResponse("<h1>Hello world %s</h1>" % user)
-
 def index(request):
     title = "to django course"
     return render(request,"index.html", {
         "title" : title
     })
-
-def about(request):
-    username = "Albertt Hdz"
-    return render(request,"about.html",{
-        "username":username
-    })
-    #return HttpResponse("<h1>About</h1>")
 
 def projects(request):
     #project = list(Project.objects.values())
