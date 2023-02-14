@@ -7,10 +7,11 @@ pip install virtualenv (inside cloned directory) **if your first time work to vi
 
 py -m venv venv (inside cloned directory) **if your has been work to virtual environment**
 
-pip install -r requirements.txt
 ## Ejecute virtual environment 
 
 .\venv\Scripts\activate 
+
+pip install -r requirements.txt
 
 To run application
 
